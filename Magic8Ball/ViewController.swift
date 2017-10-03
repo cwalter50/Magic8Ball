@@ -12,6 +12,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    // adding a comment to change commit
+    
     @IBOutlet weak var myTextField: UITextField!
     
     @IBOutlet weak var myLabel: UILabel!
