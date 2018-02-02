@@ -72,12 +72,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func buttonTapped(_ sender: UIButton) {
         
         revealFortune()
-        
     }
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
