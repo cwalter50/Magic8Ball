@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,23 +16,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your question here..." textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-lM-m7w">
-                                <rect key="frame" x="16" y="67" width="343" height="30"/>
+                                <rect key="frame" x="16" y="91" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sbJ-Pe-OHf"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="KRy-q0-T4Z"/>
+                                    <action selector="primaryActionTriggered:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="wVd-pd-rre"/>
+                                    <action selector="tfDidEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="7xG-sf-96V"/>
+                                    <action selector="tfEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="sKy-GB-A8c"/>
+                                    <action selector="tfEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Aux-iJ-XB7"/>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JW9-iK-RvD"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XKQ-dm-ah1"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-aV-g5l">
-                                <rect key="frame" x="106.5" y="123" width="161" height="45"/>
+                                <rect key="frame" x="107" y="147" width="161" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="244" id="eCZ-3s-au2"/>
@@ -55,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cx0-QJ-2vn">
-                                <rect key="frame" x="16" y="186" width="343" height="431"/>
+                                <rect key="frame" x="16" y="210" width="343" height="518"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

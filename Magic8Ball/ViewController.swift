@@ -84,10 +84,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
+
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // I was testing the lifecycle actions of the TF. All of these actions just print stuff for the programmer.
+    @IBAction func valueChanged(_ sender: UITextField)
+    {
+        print("valueChanged")
+    }
+    @IBAction func primaryActionTriggered(_ sender: UITextField)
+    {
+        print("primaryActionTriggered")
+    }
+    @IBAction func editingChanged(_ sender: UITextField)
+    {
+        print("editingChanged")
+    }
+    @IBAction func tfDidEndOnExit(_ sender: UITextField)
+    {
+        print("tfDidEndOnExit")
+    }
+    @IBAction func tfEditingDidBegin(_ sender: UITextField)
+    {
+        print("tfEditingDidBegin")
+    }
+    
+    @IBAction func tfEditingDidEnd(_ sender: UITextField)
+    {
+        print("tfEditingDidEnd")
     }
     
     
