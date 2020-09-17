@@ -19,13 +19,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var myLabel: UILabel!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
     }
 
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if event?.subtype == UIEventSubtype.motionShake {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?)
+    {
+        if event?.subtype == UIEvent.EventSubtype.motionShake
+        {
             
             revealFortune()
             
@@ -65,11 +68,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //        let speechUtterance = AVSpeechUtterance(string: tvEditor.text)
 //        
 //        speechSynthesizer.speakUtterance(speechUtterance)
+        // clear the TF
+        myTextField.text = ""
     }
     
     
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    @IBAction func buttonTapped(_ sender: UIButton)
+    {
         
         revealFortune()
     }
