@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
    
     func revealFortune () {
         // get a random number
-        let random = Int(arc4random_uniform(5))
+        let random = Int.random(in: 0...3)
         print(random)
         // link the number to a random response
         var message = ""
